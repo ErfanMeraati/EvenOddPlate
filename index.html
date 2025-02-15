@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>زوج و فرد پلاک نهان‌نما</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container mt-4">
+        <div class="card shadow-sm p-3 mx-auto" style="max-width: 500px;">
+            <h1 class="text-center mb-3 fs-5">بررسی زوج و فرد پلاک خودرو</h1>
+            <div class="row g-3">
+                <div class="col-3">
+                    <input type="text" id="iranCode" class="form-control text-center" placeholder="ایران" maxlength="2" oninput="validateNumber(this, 2)">
+                </div>
+                <div class="col-3">
+                    <input type="text" id="plateNumber" class="form-control text-center" placeholder="شماره‌پلاک" maxlength="3" oninput="validateNumber(this, 3)">
+                </div>
+                <div class="col-3">
+                    <select id="letter" class="form-select text-center">
+                        <option value="" selected disabled>حرف</option>
+                        <option value="الف">الف</option>
+                        <option value="ب">ب</option>
+                        <option value="ج">ج</option>
+                        <option value="د">د</option>
+                        <option value="س">س</option>
+                        <option value="ص">ص</option>
+                        <option value="ط">ط</option>
+                        <option value="ق">ق</option>
+                        <option value="ی">ی</option>
+                        <option value="ه">ه</option>
+                        <option value="م">م</option>
+                        <option value="ل">ل</option>
+                        <option value="پ">پ</option>
+                        <option value="ت">ت</option>
+                        <option value="ث">ث</option>
+                        <option value="ز">ز</option>
+                        <option value="ژ">ژ</option>
+                        <option value="ش">ش</option>
+                        <option value="ف">ف</option>
+                        <option value="گ">گ</option>
+                        <option value="ک">ک</option>
+
+                    </select>
+                </div>
+                
+                <div class="col-3">
+                    <input type="text" id="regionCode" class="form-control text-center" placeholder="شماره‌پلاک" maxlength="2" oninput="validateNumber(this, 2)">
+                </div>
+            </div>
+            <div id="resultAlert" class="alert mt-3 mb-0 d-none" role="alert">
+                <span id="resultText"></span>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
